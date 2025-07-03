@@ -43,7 +43,7 @@ git commit -m "Initial commit with anyname project"
 ## ✅ 3. Create a Repo on GitHub
 
 1. Go to [https://github.com/new](https://github.com/new)
-2. Name it: `ALL_DOCUMENTATIONS-`
+2. Name it: `as per need`
 3. Leave everything default (don’t add README)
 4. Click **Create repository**
 
