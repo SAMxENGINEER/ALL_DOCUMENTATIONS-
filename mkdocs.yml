@@ -1,8 +1,22 @@
 site_name: SAMxENGINEER Docs
 theme:
-  name: material
-  logo: assets/logo.jpg
-  favicon: assets/logo.jpg
+  name: material 
+  logo: images_global/logo.jpg
+  favicon: images_global/logo.jpg
+  features:
+    - navigation.footer  
+  palette:
+    - scheme: default
+      primary: deep purple
+    - scheme: slate
+      accent: deep purple
+  font:
+    text: Inter
+    code: JetBrains Mono 
+copyright: "SAMxENGINEER Docs"
+extra_css:
+  - css/extra.css
+
 plugins:
   - search
   - mermaid2
