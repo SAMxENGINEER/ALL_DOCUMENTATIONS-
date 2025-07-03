@@ -1,6 +1,8 @@
-site_name: My Docs
+site_name: SAMxENGINEER Docs
 theme:
   name: material
+  logo: assets/logo.jpg
+  favicon: assets/logo.jpg
 plugins:
   - search
   - mermaid2
