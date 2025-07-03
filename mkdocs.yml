@@ -10,6 +10,8 @@ theme:
   # Enhanced features for better navigation and UX
   features:
     # Navigation
+    - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.path
     - navigation.footer
     - navigation.indexes
