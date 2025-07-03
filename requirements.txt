@@ -1,5 +1,6 @@
 mkdocs
 mkdocs-material
 mkdocs-mermaid2-plugin
-mkdocs-windmill
-mkdocs-bootstrap
+mkdocs-minify-plugin
+mkdocs-git-revision-date-localized-plugin
+mkdocs-git-committers-plugin
