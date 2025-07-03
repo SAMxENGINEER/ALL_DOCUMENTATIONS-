@@ -44,7 +44,7 @@ git commit -m "Initial commit with anyname project"
 
 1. Go to [https://github.com/new](https://github.com/new)
 2. Name it: `as per need`
-3. Leave everything default (don’t add README)
+3. Leave everything default 
 4. Click **Create repository**
 
 ---
