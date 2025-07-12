@@ -30,6 +30,12 @@
 
 **🔗 Try it now**: [ExamPrompt AI on Hugging Face Spaces](https://huggingface.co/spaces)
 
+### 📽️ Demo Video
+
+[ExamPrompt AI Demo](https://youtu.be/3K7VmiSAiTs)
+
+> 🎬 _Click the link above to watch the full demonstration on YouTube_
+
 * **Environment**: Docker container
 * **Runtime**: Flask + Gunicorn
 * **Memory**: 16 GB on free tier
