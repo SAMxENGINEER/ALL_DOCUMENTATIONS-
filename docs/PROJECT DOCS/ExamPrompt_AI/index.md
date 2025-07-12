@@ -321,6 +321,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-📘 **Documentation**: 
+📘 **Documentation**: [Detailed Doc](https://samxengineer-docs.onrender.com/PROJECT%20DOCS/ExamPrompt_AI/Deatiled_Doc_of_project/00_idea_spark/)
 
 ---
