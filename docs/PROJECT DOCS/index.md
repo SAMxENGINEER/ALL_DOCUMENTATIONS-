@@ -23,20 +23,19 @@ Documentation isn't just busy work—it's one of the most valuable habits I need
 I keep it simple with a consistent folder structure for every project:
 
 ```
-
-MyProject/
+<Project Name>/
 ├── README.md                    # Project overview and setup
 ├── docs/
+│   ├── 00_idea_spark.md         # How I got the idea?
 │   ├── 01_problem_statement.md  # What problem am I solving?
 │   ├── 02_planning.md           # My approach and research
 │   ├── 03_implementation.md     # How I built it
 │   ├── 04_challenges.md         # Problems I faced and solutions
 │   ├── 05_results.md            # What I achieved
 │   └── 06_lessons_learned.md    # What I'd do differently
-├── assets/
-│   ├── images/                  # Screenshots and diagrams
-│   └── videos/                  # Demo recordings
-└── CHANGELOG.md                 # Version history
+└── assets/
+    ├── images/                  # Screenshots and diagrams
+    └── videos/                  # Demo recordings
 ```
 
 ## Documentation Templates
