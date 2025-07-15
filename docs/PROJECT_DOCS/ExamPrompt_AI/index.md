@@ -32,9 +32,9 @@
 
 ### 📽️ Demo Video
 
-[ExamPrompt AI Demo](https://youtu.be/3K7VmiSAiTs)
+[ExamPrompt AI Demo](https://vimeo.com/1101411694?share=copy)
 
-> 🎬 _Click the link above to watch the full demonstration on YouTube_
+> 🎬 _Click the link above to watch the full demonstration_
 
 * **Environment**: Docker container
 * **Runtime**: Flask + Gunicorn
