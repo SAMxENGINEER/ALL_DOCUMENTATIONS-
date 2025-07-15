@@ -88,7 +88,7 @@ https://med-ai-bot-70qb.onrender.com
 ### 🎥 Watch Demo
 
 Watch the full walkthrough video:  
-👉 [MedAI – Smart Skin Disease Detection & Chatbot](https://youtu.be/jHsQqj3nyWo)
+👉 [MedAI – Smart Skin Disease Detection & Chatbot](https://vimeo.com/1101410221?share=copy)
 
 ---
 

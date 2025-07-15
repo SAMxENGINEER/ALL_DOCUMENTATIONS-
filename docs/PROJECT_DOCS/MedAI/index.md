@@ -52,8 +52,8 @@ This documentation details the entire development lifecycle — from initial con
 ## Key Links
 
 * **Live App**: [med-ai-bot-70qb.onrender.com](https://med-ai-bot-70qb.onrender.com)
-* **Demo Video**: [Watch on YouTube](https://youtu.be/jHsQqj3nyWo)
-* **Source Code**: [GitHub Repository](https://github.com/SAMxENGINEER/MedAI_Skin_.git)
+* **Demo Video**: [Watch Demo](https://vimeo.com/1101410221?share=copy)
+* **Source Code**: [GitHub Repository](https://github.com/SAMxENGINEER/MedAI_Skin_)
 
 ---
 
