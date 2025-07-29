@@ -1,49 +1,48 @@
-# 📚 ExamPrompt AI
+# ExamPrompt AI
 
 **Transform your documents into intelligent, interactive study companions**
 
+
 * **Deployed on**: [Hugging Face Spaces](https://huggingface.co/spaces/samxengineer/ExamPrompt-AI)
 * **Environment**: Docker (Flask + Gunicorn)
-* **Memory**: Free CPU Tier (\~16 GB available)
+* **Memory**: Free CPU Tier (~16 GB available)
 
 ---
 
-## 🎯 Overview
+## Overview
 
 **ExamPrompt AI** revolutionizes studying by transforming static documents into dynamic, conversational learning experiences. Upload any PDF or scanned document and instantly generate an AI-powered study assistant that can answer questions, explain concepts, and help you master the material.
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-* **Multi-Format Support** — Accepts PDFs, scanned images, and plain text files
-* **Advanced Processing** — OCR and intelligent text extraction from any document
-* **Conversational Interface** — Ask natural-language questions about your content
-* **Context-Aware Responses** — Uses retrieval-augmented generation (RAG) for accuracy
-* **Real-Time Performance** — Fast document analysis and query response
-* **Web-Based UI** — No installation needed; works in all major browsers
-* **Privacy-Focused** — Files are processed locally and not stored permanently
+* Multi-Format Support — Accepts PDFs, scanned images, and plain text files  
+* Advanced Processing — OCR and intelligent text extraction from any document  
+* Conversational Interface — Ask natural-language questions about your content  
+* Context-Aware Responses — Uses retrieval-augmented generation (RAG) for accuracy  
+* Real-Time Performance — Fast document analysis and query response  
+* Web-Based UI — No installation needed; works in all major browsers  
+* Privacy-Focused — Files are processed locally and not stored permanently  
 
 ---
 
-## 🚀 Live Demo
+## Live Demo
 
-**🔗 Try it now**: [ExamPrompt AI on Hugging Face Spaces](https://huggingface.co/spaces)
+**Try it now**: [ExamPrompt AI on Hugging Face Spaces](https://huggingface.co/spaces)
 
-### 📽️ Demo Video
+### Demo Video
 
 [ExamPrompt AI Demo](https://vimeo.com/1101411694?share=copy)
 
-> 🎬 _Click the link above to watch the full demonstration_
-
-* **Environment**: Docker container
-* **Runtime**: Flask + Gunicorn
-* **Memory**: 16 GB on free tier
-* **Deployment**: Automated using Docker
+* Environment: Docker container  
+* Runtime: Flask + Gunicorn  
+* Memory: 16 GB on free tier  
+* Deployment: Automated using Docker  
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 | Category            | Technology                   | Purpose                                    |
 | ------------------- | ---------------------------- | ------------------------------------------ |
@@ -59,105 +58,76 @@
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
-ExamPrompt_AI/
+
+ExamPrompt\_AI/
 ├── app/
-│   ├── app.py                 # Main Flask application
-│   ├── document_handler.py    # Document/OCR processing logic
+│   ├── app.py
+│   ├── document\_handler.py
 │   ├── static/
-│   │   ├── style.css          # Frontend styles
-│   │   └── script.js          # Frontend behavior
+│   │   ├── style.css
+│   │   └── script.js
 │   └── templates/
-│       └── index.html         # Web interface template
-├── requirements.txt           # Python dependencies
-├── Dockerfile                 # Container configuration
-├── README.md                  # Project documentation
-├── .env.example               # Environment variable template
-└── .gitignore                 # Git ignore rules
+│       └── index.html
+├── requirements.txt
+├── Dockerfile
+├── README.md
+├── .env.example
+└── .gitignore
+
 ```
 
 ---
 
-## ⚙️ Quick Start
+## Quick Start
 
-### 🔧 Prerequisites
+### Prerequisites
 
-* Python 3.10+
-* Docker
-* Google Generative AI API Key
-* Groq API Key
+* Python 3.10+  
+* Docker  
+* Google Generative AI API Key  
+* Groq API Key  
 
-### 🧪 Local Development
-
-1. **Clone the Repository**
-
-   ```bash
-   git clone https://github.com/yourusername/examprompai.git
-   cd examprompai
-   ```
-
-2. **Create Virtual Environment**
-
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-3. **Install Dependencies**
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Configure Environment Variables**
-
-   ```bash
-   cp .env.example .env
-   # Edit the .env file with your API keys
-   ```
-
-5. **Run the App**
-
-   ```bash
-   # Development server
-   python app/app.py
-
-   # Production server
-   gunicorn --bind 0.0.0.0:7860 --timeout 120 --workers 1 app.app:app
-   ```
-
-6. **Visit in Browser**
-
-   ```
-   http://localhost:7860
-   ```
-
----
-
-### 🐳 Docker Deployment
+### Local Development
 
 ```bash
-# Build the Docker image
-docker build -t examprompai .
+git clone https://github.com/yourusername/examprompai.git
+cd examprompai
 
-# Run the container
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+pip install -r requirements.txt
+
+cp .env.example .env
+# Edit the .env file with your API keys
+
+python app/app.py  # Development server
+
+# Or run production server
+gunicorn --bind 0.0.0.0:7860 --timeout 120 --workers 1 app.app:app
+````
+
+Visit `http://localhost:7860`
+
+---
+
+### Docker Deployment
+
+```bash
+docker build -t examprompai .
 docker run -p 7860:7860 --env-file .env examprompai
 ```
 
 ---
 
-## 🔐 Environment Variables
-
-Create a `.env` file in the root directory:
+## Environment Variables
 
 ```env
-# Required API Keys
 GOOGLE_API_KEY=your_google_generative_ai_key_here
 GROQ_API_KEY=your_groq_api_key_here
-
-# Optional Settings
 FLASK_ENV=production
 FLASK_DEBUG=False
 SESSION_SECRET_KEY=your_session_secret
@@ -165,66 +135,37 @@ SESSION_SECRET_KEY=your_session_secret
 
 ---
 
-## 🔑 Getting API Keys
+## Getting API Keys
 
-* **Google AI API**
-
-  * Visit [Google AI Studio](https://makersuite.google.com/app/apikey)
-  * Create and copy a new API key
-  * Enable the Generative AI API
-
-* **Groq API**
-
-  * Go to [Groq Console](https://console.groq.com/)
-  * Generate a new key from the API Keys section
+* **Google**: [Google AI Studio](https://makersuite.google.com/app/apikey)
+* **Groq**: [Groq Console](https://console.groq.com/)
 
 ---
 
-## 📖 Usage Guide
+## Usage Guide
 
-### 📤 Upload Documents
+1. Upload a PDF or image (Max: 10MB)
+2. Wait for processing
+3. Ask natural-language questions
 
-1. Click **"Choose File"**
-2. Select a PDF or image (Max size: 10MB)
-3. Wait for the file to be processed
-4. Start chatting with the AI
+Examples:
 
-### 💬 Ask Questions Like:
-
-* “What is the main thesis of chapter 3?”
-* “Explain the concept of machine learning.”
-* “Compare Keynesian vs classical economics.”
-* “Summarize section 2.4.”
-
-### ✅ Best Practices
-
-* Ask clear, specific questions
-* Reference headings or sections where possible
-* Use follow-ups to continue a conversation
-* Maintain context across questions for better accuracy
+* What is the main thesis of chapter 3?
+* Explain the concept of machine learning.
+* Summarize section 2.4.
 
 ---
 
-## 🔧 Advanced Configuration
-
-### 🔢 Memory & Chunking
+## Advanced Configuration
 
 ```python
 CHUNK_SIZE = 1000
 CHUNK_OVERLAP = 200
-```
 
-### 🧠 FAISS Index Type
+FAISS_INDEX_TYPE = "IndexFlatL2"
 
-```python
-FAISS_INDEX_TYPE = "IndexFlatL2"  # or "IndexIVFFlat"
-```
-
-### 🤖 Available Groq Models
-
-```python
 GROQ_MODELS = [
-    "deepseek-r1-distill-llama-70b",  # currently used
+    "deepseek-r1-distill-llama-70b",
     "mixtral-8x7b-32768",
     "llama2-70b-4096",
     "gemma-7b-it"
@@ -233,7 +174,7 @@ GROQ_MODELS = [
 
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 | Issue              | Solution                                      |
 | ------------------ | --------------------------------------------- |
@@ -242,91 +183,64 @@ GROQ_MODELS = [
 | Slow Responses     | Monitor API limits or upgrade to paid tiers   |
 | Docker Build Fails | Check your internet connection and disk space |
 
-### 🐞 Enable Debug Mode
+---
 
-```bash
-export FLASK_DEBUG=True
-export FLASK_ENV=development
-python app/app.py
-```
+## Contributing
+
+Follow standard GitHub flow:
+
+1. Fork
+2. Create branch
+3. Commit
+4. Push
+5. Pull Request
 
 ---
 
-## 🤝 Contributing
+## Roadmap
 
-We welcome contributions!
+### Current Sprint
 
-1. Fork the repo
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Commit your changes: `git commit -m "Add amazing feature"`
-4. Push to GitHub: `git push origin feature/amazing-feature`
-5. Open a Pull Request
+* [ ] Multi-file upload
+* [ ] Source citation
+* [ ] Exportable conversation logs
 
-### Contributor Guidelines
+### Upcoming
 
-* Follow PEP 8 formatting
-* Include tests for any new features
-* Update docs if functionality changes
-* Ensure Docker builds without errors
+* [ ] Firebase login
+* [ ] Mobile-friendly UI
+* [ ] Model selector
 
 ---
 
-## 🗺️ Roadmap
+## Why Hugging Face Spaces?
 
-### 🔄 Current Sprint
-
-* [ ] Multi-file upload support
-* [ ] Source citation for responses
-* [ ] Exportable conversation history
-
-### 🎯 Upcoming Features
-
-* [ ] Firebase Authentication
-* [ ] Mobile-responsive improvements
-* [ ] Advanced document filters
-* [ ] Custom model selection
-
-### 🚀 Future Plans
-
-* [ ] Multilingual support
-* [ ] Collaborative study mode
-* [ ] LMS (Learning Management System) integration
-* [ ] Insight and analytics dashboard
+| Platform  | RAM   | Storage  | Cost | AI Friendly |
+| --------- | ----- | -------- | ---- | ----------- |
+| Render    | 512MB | Limited  | Yes  | No          |
+| HF Spaces | 16 GB | Generous | Yes  | Yes         |
 
 ---
 
-## 🆚 Why We Chose Hugging Face Spaces
+## License
 
-| Platform      | RAM   | Storage  | Cost | AI Friendly |
-| ------------- | ----- | -------- | ---- | ----------- |
-| Render (Free) | 512MB | Limited  | ✅    | ❌           |
-| HF Spaces     | 16 GB | Generous | ✅    | ✅           |
-
-**Hugging Face Spaces** supports:
-
-* Large document handling with OCR
-* FAISS vector operations
-* LangChain pipelines and LLM processing
-* Cost-effective, scalable deployment
+Licensed under the [MIT License](LICENSE)
 
 ---
 
-## 📄 License
+## Acknowledgments
 
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-## 🙏 Acknowledgments
-
-* **LangChain** — LLM orchestration
-* **Groq** — High-performance LLM inference
-* **Google** — Generative AI embeddings
-* **Hugging Face** — Free deployment infrastructure
-* **Open Source Community** — For the amazing tools & libraries
+* LangChain
+* Groq
+* Google
+* Hugging Face
+* Open Source tools
 
 ---
 
-📘 **Documentation**: [Detailed Doc](https://samxengineer-docs.onrender.com/PROJECT%20DOCS/ExamPrompt_AI/Deatiled_Doc_of_project/00_idea_spark/)
+Documentation: [Detailed Doc](https://samxengineer-docs.onrender.com/PROJECT%20DOCS/ExamPrompt_AI/Deatiled_Doc_of_project/00_idea_spark/)
 
 ---
+
+**Documented on: Jul 11, 2025**
+

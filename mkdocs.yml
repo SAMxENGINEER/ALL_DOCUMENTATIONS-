@@ -73,12 +73,7 @@ plugins:
   - mermaid2
   - minify:
       minify_html: true
-  - git-revision-date-localized:
-      enable_creation_date: false
-  - git-committers:
-      repository: SAMxENGINNER/ALL_DOCUMENTATIONS-
-      branch: main
-
+      
 # Markdown extensions
 markdown_extensions:
   # Python Markdown

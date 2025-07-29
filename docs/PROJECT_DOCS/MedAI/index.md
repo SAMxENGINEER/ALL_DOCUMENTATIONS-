@@ -1,4 +1,4 @@
-# MedAI: Skin Health Companion – Documentation Index
+# MedAI: Skin Health Companion – Documentation Index  
 
 **MedAI** is a multimodal, AI-driven assistant designed to provide preliminary analysis and helpful feedback on common skin conditions. By integrating **image classification** and **natural language understanding**, it enables users to explore dermatological concerns through both **uploaded images** and **text-based medical queries**.
 
@@ -11,7 +11,6 @@ This documentation details the entire development lifecycle — from initial con
 * Skin diseases are widespread but often underdiagnosed, especially in regions with limited access to dermatologists.
 * Most existing tools handle either **image** or **text** inputs — MedAI bridges that gap by combining both.
 * Features two custom-trained CNN models:
-
   * A model to **validate human skin images**
   * A classifier to categorize images into **four diagnostic skin condition groups**
 * Integrated with **LangChain and Gemini** for intelligent, context-aware chat responses.
@@ -59,8 +58,11 @@ This documentation details the entire development lifecycle — from initial con
 
 ## License
 
-This project is released under the **MIT License**. 
-
+This project is released under the **MIT License**.  
 You are free to use, modify, and distribute the code with appropriate credit. For full licensing terms, please refer to the [`LICENSE`](LICENSE).
 
 ---
+
+**Documented on: Jul 14, 2025**
+
+
