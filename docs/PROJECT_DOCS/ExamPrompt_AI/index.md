@@ -2,10 +2,9 @@
 
 **Transform your documents into intelligent, interactive study companions**
 
-
 * **Deployed on**: [Hugging Face Spaces](https://huggingface.co/spaces/samxengineer/ExamPrompt-AI)
 * **Environment**: Docker (Flask + Gunicorn)
-* **Memory**: Free CPU Tier (~16 GB available)
+* **Memory**: Free CPU Tier (\~16 GB available)
 
 ---
 
@@ -17,13 +16,13 @@
 
 ## Key Features
 
-* Multi-Format Support — Accepts PDFs, scanned images, and plain text files  
-* Advanced Processing — OCR and intelligent text extraction from any document  
-* Conversational Interface — Ask natural-language questions about your content  
-* Context-Aware Responses — Uses retrieval-augmented generation (RAG) for accuracy  
-* Real-Time Performance — Fast document analysis and query response  
-* Web-Based UI — No installation needed; works in all major browsers  
-* Privacy-Focused — Files are processed locally and not stored permanently  
+* Multi-Format Support — Accepts PDFs, scanned images, and plain text files
+* Advanced Processing — OCR and intelligent text extraction from any document
+* Conversational Interface — Ask natural-language questions about your content
+* Context-Aware Responses — Uses retrieval-augmented generation (RAG) for accuracy
+* Real-Time Performance — Fast document analysis and query response
+* Web-Based UI — No installation needed; works in all major browsers
+* Privacy-Focused — Files are processed locally and not stored permanently
 
 ---
 
@@ -35,10 +34,10 @@
 
 [ExamPrompt AI Demo](https://vimeo.com/1101411694?share=copy)
 
-* Environment: Docker container  
-* Runtime: Flask + Gunicorn  
-* Memory: 16 GB on free tier  
-* Deployment: Automated using Docker  
+* Environment: Docker container
+* Runtime: Flask + Gunicorn
+* Memory: 16 GB on free tier
+* Deployment: Automated using Docker
 
 ---
 
@@ -61,11 +60,10 @@
 ## Project Structure
 
 ```
-
-ExamPrompt\_AI/
+ExamPrompt_AI/
 ├── app/
 │   ├── app.py
-│   ├── document\_handler.py
+│   ├── document_handler.py
 │   ├── static/
 │   │   ├── style.css
 │   │   └── script.js
@@ -76,7 +74,6 @@ ExamPrompt\_AI/
 ├── README.md
 ├── .env.example
 └── .gitignore
-
 ```
 
 ---
@@ -85,10 +82,10 @@ ExamPrompt\_AI/
 
 ### Prerequisites
 
-* Python 3.10+  
-* Docker  
-* Google Generative AI API Key  
-* Groq API Key  
+* Python 3.10+
+* Docker
+* Google Generative AI API Key
+* Groq API Key
 
 ### Local Development
 
@@ -108,7 +105,7 @@ python app/app.py  # Development server
 
 # Or run production server
 gunicorn --bind 0.0.0.0:7860 --timeout 120 --workers 1 app.app:app
-````
+```
 
 Visit `http://localhost:7860`
 
@@ -238,9 +235,4 @@ Licensed under the [MIT License](LICENSE)
 
 ---
 
-Documentation: [Detailed Doc](https://samxengineer-docs.onrender.com/PROJECT%20DOCS/ExamPrompt_AI/Deatiled_Doc_of_project/00_idea_spark/)
-
----
-
 **Documented on: Jul 11, 2025**
-
