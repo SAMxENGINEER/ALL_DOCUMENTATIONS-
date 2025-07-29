@@ -74,7 +74,7 @@ plugins:
   - minify:
       minify_html: true
   - git-revision-date-localized:
-      enable_creation_date: true
+      enable_creation_date: false
   - git-committers:
       repository: SAMxENGINNER/ALL_DOCUMENTATIONS-
       branch: main
