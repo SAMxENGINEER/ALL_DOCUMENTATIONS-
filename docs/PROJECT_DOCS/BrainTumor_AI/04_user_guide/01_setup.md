@@ -1,4 +1,4 @@
-# 01 – Setup and Usage
+# 01 – Setup 
 
 This section explains how to set up and use the Brain Tumor Detection System either **locally** or via the **deployed web application**.
 
