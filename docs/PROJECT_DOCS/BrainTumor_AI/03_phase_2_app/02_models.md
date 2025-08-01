@@ -53,7 +53,7 @@ Model: Sequential
 * **Parameter Count**: \~3.45 million
 * **Accuracy**: Approximately 97% on held-out test data
 
-![Tumor Classification Model Architecture](images\classifier_model.png)
+![Tumor Classification Model Architecture](images/classifier_model.png)
 
 ---
 
