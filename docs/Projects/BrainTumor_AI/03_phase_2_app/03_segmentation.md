@@ -92,7 +92,7 @@ These metrics reflect the model’s robustness across varied patient cases and i
 
 ## Visual Examples of Segmentation
 
-![example](images\seg_exp.png)
+![example](images/seg_exp.png)
 
 These visualizations clearly demonstrate the model’s ability to localize tumors with high precision and overlap, building confidence in its real-world usage.
 

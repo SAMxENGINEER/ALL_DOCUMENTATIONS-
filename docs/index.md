@@ -1,40 +1,50 @@
 # SAMxENGINEER Documentation
 
-Welcome to my technical documentation hub. This is where I document my learning journey, research findings, and implementation approaches in artificial intelligence and machine learning.
+Welcome to my technical documentation hub. This site outlines my learning journey, research insights, and implementation strategies in Artificial Intelligence and Machine Learning.
 
-## About
+---
 
-I'm a student focused on AI, ML, and Deep Learning. This documentation serves as my knowledge base and portfolio, showcasing my understanding of complex concepts and practical implementations.
+## About Me
 
-## Areas of Focus
+I am a student and practitioner focused on AI, Machine Learning, and Deep Learning. This documentation serves as both a portfolio and a structured knowledge base, capturing the depth of concepts I’ve studied and the projects I’ve developed.
 
-**Machine Learning**
+---
 
-- Supervised and Unsupervised Learning
-- Feature Engineering and Model Selection
-- Performance Optimization and Evaluation
+## Areas of Intrest
 
-**Deep Learning**
+### Machine Learning
 
-- Neural Network Architectures
-- Computer Vision and NLP Applications
-- Framework Implementation (TensorFlow)
+* Supervised and Unsupervised Learning
+* Feature Engineering and Model Selection
+* Performance Tuning and Model Evaluation
 
-**Data Science**
+### Deep Learning
 
-- Data Analysis and Visualization
-- Statistical Modeling
+* Convolutional, Recurrent, and Transformer Architectures
+* Applications in Computer Vision and Natural Language Processing
+* TensorFlow-based Model Development and Optimization
 
-**Current Research Interests**
+### Data Science
 
-- [Specific area you're exploring]
-- [Another area of interest]
+* Exploratory Data Analysis
+* Statistical Modeling and Inference
+* Data Visualization using Matplotlib, Seaborn, and Plotly
 
-## Documentation Structure
+---
 
-My documentation follows a systematic approach:
+## Current Research in AI & Medical Imaging
 
-- **Concept Explanations** - Breaking down complex topics
-- **Implementation Guides** - Step-by-step technical walkthroughs  
-- **Research Notes** - Findings from papers and experiments
-- **Code Examples** - Practical implementations with explanations
+* EEG and MRI-based analysis of Status Epilepticus
+* AI Applications in Medical Imaging and Diagnostics
+
+---
+
+## Structure of this Documentation
+
+The content is organized into the following sections:
+
+* **Concept Explanations** – Simplified breakdowns of foundational and advanced topics
+* **Implementation Guides** – Step-by-step walkthroughs for real-world use cases
+* **Research Notes** – Insights and findings from academic and practical studies
+* **Code Examples** – Modular scripts and annotated implementations
+

@@ -80,7 +80,7 @@ Further performance details, including confusion matrices and classification rep
 
 ## Model Visualization
 
-![Model Architecture](images\classifier_model.png)
+![Model Architecture](images/classifier_model.png)
 
 
 ---

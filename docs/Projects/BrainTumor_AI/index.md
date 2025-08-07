@@ -159,7 +159,7 @@ For full details, see the [LICENSE](LICENSE) file in the main repository.
 We extend our sincere gratitude to the following individuals and communities for their invaluable support throughout the project:
 
 - **Dr. Anupama Mishra** – For her continuous academic guidance, mentorship, and critical feedback during the research and publication process.
-- **Mr. Siddesh** – For his valuable contributions during the brainstorming phase, helping to shape the core idea and direction of the project.
+- **Mr. Siddhesh Kolambkar** – For his valuable contributions during the brainstorming phase, helping to shape the core idea and direction of the project.
 - **Kaggle Community** – For sharing publicly available MRI datasets, which served as a foundation for training and validating our models.
 
 
