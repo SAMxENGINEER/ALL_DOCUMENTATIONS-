@@ -1,6 +1,6 @@
-site_name: SAMxENGINEER Docs
-site_description: Comprehensive documentation for SAMxENGINEER projects
-site_author: SAMxENGINEER
+site_name: "SAMxENGINEER – AI, Machine Learning & Research Portfolio"
+site_description: "Portfolio and research hub of Sameer Chavan (SAMxENGINEER) — AI, Machine Learning, Deep Learning, and Medical Imaging projects, publications, and patents."
+site_author: "Sameer Chavan"
 
 theme:
   name: material
