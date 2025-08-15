@@ -1,0 +1,93 @@
+/* Custom CSS for SAMxENGINEER Docs */
+
+/* Root variables for consistent theming */
+:root {
+  --md-primary-fg-color: #673ab7;
+  --md-primary-fg-color--light: #9c27b0;
+  --md-primary-fg-color--dark: #512da8;
+  --custom-border-radius: 8px;
+}
+
+/* Enhanced code blocks */
+.highlight {
+  border-radius: var(--custom-border-radius);
+  overflow: hidden;
+}
+
+/* Custom admonition styles */
+.md-typeset .admonition {
+  border-radius: var(--custom-border-radius);
+  border-left: 4px solid var(--md-primary-fg-color);
+}
+
+/* Enhanced tables */
+.md-typeset table:not([class]) {
+  border-radius: var(--custom-border-radius);
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Custom button styles */
+.md-button {
+  border-radius: var(--custom-border-radius);
+  transition: all 0.2s ease;
+}
+
+.md-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Logo styling */
+.md-header__button.md-logo img {
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.md-header__button.md-logo:hover img {
+  transform: scale(1.1);
+}
+
+/* Custom footer styling */
+.md-footer {
+  background: linear-gradient(135deg, var(--md-primary-fg-color), var(--md-primary-fg-color--light));
+}
+
+/* Enhanced search results */
+.md-search-result__meta {
+  color: var(--md-primary-fg-color);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--md-default-bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--md-primary-fg-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--md-primary-fg-color--dark);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 76.1875em) {
+  .md-nav--primary .md-nav__title {
+    background-color: var(--md-primary-fg-color);
+  }
+}
+
+/* Print styles */
+@media print {
+  .md-header,
+  .md-footer,
+  .md-sidebar {
+    display: none;
+  }
+}
