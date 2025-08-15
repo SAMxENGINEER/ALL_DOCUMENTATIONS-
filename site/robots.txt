@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://samxengineer-docs.onrender.com/sitemap.xml
