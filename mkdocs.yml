@@ -73,6 +73,7 @@ plugins:
   - mermaid2
   - minify:
       minify_html: true
+  
       
 # Markdown extensions
 markdown_extensions:
@@ -123,6 +124,10 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+
+
+extra_files:
+  - sitemap.xml
 
 # Custom CSS and JavaScript
 extra_css:
