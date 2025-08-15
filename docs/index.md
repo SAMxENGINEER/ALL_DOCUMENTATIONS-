@@ -1,6 +1,6 @@
 # Welcome to My Archive
 
-Hi, I’m **SAMxENGINEER**.  
+Hi, I’m Sameer Chavan (SAMxENGINEER).  
 This is my personal portfolio and documentation hub, bringing together my **projects**, **research**, **patents**, **publications**, and **achievements** in Artificial Intelligence, Machine Learning, and related fields.  
 
 Think of this as my digital workspace — a place where I share ideas, document my learning, and showcase the work I’m most proud of.
