@@ -18,6 +18,7 @@ This is the **central hub** for all my documented projects. Each project page co
 | **[ExamPrompt AI](./ExamPrompt_AI/index.md)** | An intelligent exam-preparation assistant built with LangChain, Flask, and Retrieval-Augmented Generation (RAG) | LangChain, Flask, RAG |
 | **[Lung Cancer](./Lung_Cancer/index.md)** | Machine learning and deep learning approaches for early detection and classification of lung cancer | ML, DL, Medical AI |
 | **[MedAI](./MedAI/index.md)** | A broader medical imaging initiative covering classification, validation, and segmentation models | Medical Imaging, AI |
+| **[ImgTechAI](./ImgTechAI/index.md)** | A web-based image processing and computer vision application with real-time transformations and no-code interactivity | Streamlit, OpenCV, NumPy |
 
 ---
 
@@ -44,25 +45,21 @@ Well-crafted documentation helps me in multiple ways:
 ## My Documentation Workflow
 
 ### **During Development**
-
-• Start with a problem statement
-• Log decisions as I go
-• Capture screenshots or errors
-• Track feature progress and time spent
+• Start with a problem statement  
+• Log decisions as I go  
+• Capture screenshots or errors  
+• Track feature progress and time spent  
 
 ### **After Completion**
-
-• Polish the README
-• Write reflections, lessons, and challenges
-• Record a demo or create diagrams
-• Finalize documentation for deployment
+• Polish the README  
+• Write reflections, lessons, and challenges  
+• Record a demo or create diagrams  
+• Finalize documentation for deployment  
 
 ### **Monthly Maintenance**
-
-• Update if project evolves
-• Fix broken links or typos
-• Revisit for portfolio enhancement
-
+• Update if project evolves  
+• Fix broken links or typos  
+• Revisit for portfolio enhancement  
 
 ---
 
@@ -80,11 +77,11 @@ Well-crafted documentation helps me in multiple ways:
 
 ## What Great Documentation Answers
 
-1. **What problem did I solve?**
-2. **How did I solve it?**
-3. **What trade-offs or difficulties did I face?**
-4. **What results did I achieve?**
-5. **What did I learn?**
+1. **What problem did I solve?**  
+2. **How did I solve it?**  
+3. **What trade-offs or difficulties did I face?**  
+4. **What results did I achieve?**  
+5. **What did I learn?**  
 
 ---
 
