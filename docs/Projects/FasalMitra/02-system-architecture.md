@@ -1,66 +1,113 @@
 # System Architecture
 
-## Architecture Summary
+## Architectural Style
 
-The platform follows a two-tier architecture:
+The platform uses a client-service architecture with clear separation between user interaction and domain service execution.
 
-- **Frontend Application Layer** for user interaction and journey orchestration.
-- **Backend Service Layer** for recommendation logic, advisory generation, and district data delivery.
+- **Frontend Layer**: Handles navigation, forms, presentation, and workflow progression.
+- **Backend Layer**: Handles recommendation processing, advisory generation, and district context delivery.
 
-## Component Topology
+## Architecture Stack View
 
 ```mermaid
 graph TB
-    subgraph Client Side
-      UI[Web Application]
-      Pages[Feature Pages]
-      Components[Reusable UI Components]
+    subgraph Presentation Layer
+      UI[Web UI]
+      Routing[Route Navigation]
+      Components[Reusable Components]
+      State[Workflow State]
     end
 
-    subgraph Service Side
-      API[HTTP API Layer]
-      Predict[Recommendation Service]
-      Advisory[Advisory Service]
-      District[District Information Service]
-      Support[Support Services]
+    subgraph Service Layer
+      API[API Gateway Layer]
+      Predict[Recommendation Domain Service]
+      District[District Context Service]
+      Advisory[Advisory Domain Service]
+      Support[Shared Support Services]
     end
 
-    UI --> Pages --> Components
-    UI --> API
+    UI --> Routing
+    Routing --> Components
+    Components --> State
+    State --> API
+
     API --> Predict
-    API --> Advisory
     API --> District
+    API --> Advisory
+
     Predict --> Support
-    Advisory --> Support
     District --> Support
+    Advisory --> Support
 ```
 
-## Runtime Interaction Model
+## Runtime Communication Model
 
-1. User actions in the web interface trigger feature-specific API calls.
-2. API layer routes requests to dedicated domain services.
-3. Services assemble contextual outputs and return normalized responses.
-4. Frontend renders recommendation, advisory, and district outcomes.
+- Frontend initiates request by user action.
+- API endpoint resolves target domain workflow.
+- Domain service executes context-driven logic.
+- Response is normalized and returned to frontend.
+- Frontend updates the active view and next possible actions.
 
-## Request Lifecycle Flow
+## Core Domain Service Responsibilities
+
+### Recommendation Domain Service
+
+- Interprets recommendation request context.
+- Produces prioritized crop options.
+- Returns recommendation outputs with explanatory metadata.
+
+### District Context Service
+
+- Resolves district-specific information view.
+- Supplies planning-oriented contextual payloads.
+
+### Advisory Domain Service
+
+- Interprets user advisory prompts.
+- Composes context-aware response text.
+
+## System Interaction Sequence
 
 ```mermaid
 sequenceDiagram
     participant User
     participant Frontend
     participant API
-    participant Service
+    participant DomainService
+    participant Renderer
 
-    User->>Frontend: Submit feature input
-    Frontend->>API: Send structured request
-    API->>Service: Execute domain workflow
-    Service-->>API: Return computed response
-    API-->>Frontend: Send response payload
-    Frontend-->>User: Render actionable output
+    User->>Frontend: Perform workflow action
+    Frontend->>API: Submit endpoint request
+    API->>DomainService: Execute business flow
+    DomainService-->>API: Return response payload
+    API-->>Frontend: Return normalized output
+    Frontend->>Renderer: Update view and state
+    Renderer-->>User: Display actionable result
 ```
 
-## Cross-Cutting Concerns
+## Request Routing Topology
 
-- Unified API access model for all major product capabilities.
-- Consistent district-context behavior across recommendation and advisory experiences.
-- Shared language-aware interface behavior for multilingual usability.
+```mermaid
+graph LR
+    C["Client Requests"] --> H["GET api health"]
+    C --> P["POST api predict"]
+    C --> D["GET api district by name"]
+    C --> A["POST api advisory"]
+
+    P --> PS["Recommendation Service"]
+    D --> DS["District Service"]
+    A --> AS["Advisory Service"]
+```
+
+## Architectural Consistency Patterns
+
+- Unified API prefix for domain endpoint discoverability.
+- Consistent request-to-response lifecycle across features.
+- Shared district context model reused by multiple workflows.
+- Modular frontend pages aligned to domain capabilities.
+
+## Reliability and Extensibility (High Level)
+
+- Modular service partitioning supports capability evolution.
+- Decoupled frontend modules support independent UX refinements.
+- Contracted endpoint behavior supports integration stability.

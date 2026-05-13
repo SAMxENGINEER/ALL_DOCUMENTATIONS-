@@ -1,75 +1,158 @@
 # User Journeys and Workflows
 
-## Journey 1: Crop Recommendation
+## Journey Catalog
 
-This journey supports users in obtaining a ranked set of crop options with current context.
+1. Crop Recommendation Journey
+2. District Intelligence Journey
+3. Advisory Guidance Journey
+4. Crop Rotation Journey
+5. Policy Discovery Journey
+
+## 1) Crop Recommendation Journey
+
+### Objective
+
+Help users obtain a practical ranked list of crop options using submitted context.
+
+### Flow
 
 ```mermaid
 flowchart TD
-    A[Open Recommendation Page] --> B[Provide District and Farming Inputs]
-    B --> C[Submit Recommendation Request]
-    C --> D[System Evaluates Inputs and Context]
-    D --> E[Ranked Crop Recommendations Returned]
-    E --> F[Results Page with Weather and Advisory Access]
+    A[Open Recommendation Page] --> B[Select District]
+    B --> C[Provide Farming Inputs]
+    C --> D[Submit Request]
+    D --> E[Process Recommendation Workflow]
+    E --> F[Return Ranked Crops]
+    F --> G[Render Results with Context]
 ```
 
-## Journey 2: District Intelligence Review
+### User Decisions Supported
 
-This journey supports district-level planning and seasonal awareness.
+- Compare top crop options.
+- Choose next action: advisory follow-up or rotation planning.
+
+## 2) District Intelligence Journey
+
+### Objective
+
+Provide planning context for a selected district.
+
+### Flow
 
 ```mermaid
 flowchart TD
-    A[Open District Dashboard] --> B[Select District]
-    B --> C[Fetch District Intelligence]
-    C --> D[Display Region Summary]
-    D --> E[Show Risk Highlights]
-    E --> F[Show Sowing and Yield Insights]
+    A[Open Dashboard] --> B[Pick District]
+    B --> C[Load District Payload]
+    C --> D[Show Region Summary]
+    D --> E[Show Climate Risk Highlights]
+    E --> F[Show Sowing and Yield Sections]
+    F --> G[Support District-Level Planning]
 ```
 
-## Journey 3: Advisory Interaction
+### User Decisions Supported
 
-This journey supports targeted question-based guidance.
+- Understand local planning context.
+- Align crop planning with district conditions.
+
+## 3) Advisory Guidance Journey
+
+### Objective
+
+Provide follow-up guidance in response to user questions.
+
+### Flow
 
 ```mermaid
 flowchart TD
     A[Open Advisory Panel] --> B[Enter Question]
-    B --> C[Attach District and Optional Crop Context]
-    C --> D[Generate Advisory Response]
-    D --> E[Stream Response to User]
+    B --> C[Attach District Context]
+    C --> D[Optional Crop Context]
+    D --> E[Generate Advisory Output]
+    E --> F[Display Guidance]
 ```
 
-## Journey 4: Crop Rotation Planning
+### User Decisions Supported
 
-This journey helps users identify next-season crop continuity.
+- Clarify recommended actions.
+- Translate recommendation into field-level next steps.
+
+## 4) Crop Rotation Journey
+
+### Objective
+
+Recommend next crop direction based on previously grown crop.
+
+### Flow
 
 ```mermaid
 flowchart TD
-    A[Open Rotation Planner] --> B[Select Previous Crop]
-    B --> C[Build Rotation Chain]
-    C --> D[Present Recommended Next Crop]
-    D --> E[Explain Rotation Reasoning]
+    A[Open Rotation Planner] --> B[Select Last Crop]
+    B --> C[Compute Rotation Sequence]
+    C --> D[Present Next Crop]
+    D --> E[Show Rotation Rationale]
+    E --> F[Enable Season Continuity Planning]
 ```
 
-## Journey 5: Policy Discovery
+### User Decisions Supported
 
-This journey helps users identify support schemes and official channels.
+- Plan what to grow next.
+- Understand continuity logic between seasons.
+
+## 5) Policy Discovery Journey
+
+### Objective
+
+Help users identify relevant support schemes and access channels.
+
+### Flow
 
 ```mermaid
 flowchart TD
-    A[Open Policy Advisor] --> B[Filter by Scheme Category]
-    B --> C[Review Scheme Details]
-    C --> D[Check Eligibility and Benefit]
-    D --> E[Follow Official Access Link]
+    A[Open Policy Advisor] --> B[Choose Policy Category]
+    B --> C[Review Scheme Card]
+    C --> D[Check Eligibility]
+    D --> E[Review Benefits]
+    E --> F[Open Official Access Link]
 ```
 
-## End-to-End Multi-Journey Map
+### User Decisions Supported
+
+- Identify suitable support programs.
+- Move from awareness to application channel.
+
+## Cross-Journey Transition Map
 
 ```mermaid
 graph LR
     H[Home] --> R[Recommendation]
     H --> D[Dashboard]
     H --> P[Policy Advisor]
+
     R --> RS[Results]
     RS --> A[Advisory]
-    RS --> RP[Rotation Planner]
+    RS --> ROT[Rotation]
+
+    D --> R
+    P --> R
 ```
+
+## Lifecycle State View
+
+```mermaid
+stateDiagram-v2
+    [*] --> Discover
+    Discover --> Input
+    Input --> Evaluate
+    Evaluate --> Recommend
+    Recommend --> Advise
+    Recommend --> Rotate
+    Advise --> Act
+    Rotate --> Act
+    Act --> [*]
+```
+
+## Journey Design Notes
+
+- Journeys are independent yet connected.
+- Recommendation and results act as the central decision hub.
+- District and policy journeys can be entered directly or used as support context.

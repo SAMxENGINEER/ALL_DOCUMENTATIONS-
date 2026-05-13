@@ -1,100 +1,154 @@
 # Service Contracts
 
-## Contract Style
+## Contract Philosophy
 
-All service interactions use clear request/response contracts over HTTP. Responses are normalized for frontend rendering and user decision clarity.
+Service contracts are designed to be predictable, minimal, and integration-friendly. Each endpoint maps to a specific product capability and returns a response shape suitable for direct UI consumption.
 
-## Endpoint Catalog
+## Endpoint Inventory
 
 - `GET /api/health`
 - `POST /api/predict`
 - `POST /api/advisory`
 - `GET /api/district/{district_name}`
 
-## Contract Diagram
+## Contract Topology
 
 ```mermaid
 graph TD
-    C[Client] --> H[/GET /api/health/]
-    C --> P[/POST /api/predict/]
-    C --> A[/POST /api/advisory/]
-    C --> D[/GET /api/district/district_name/]
+    Client[Client Application] --> Health[/GET /api/health/]
+    Client --> Predict[/POST /api/predict/]
+    Client --> Advisory[/POST /api/advisory/]
+    Client --> District[/GET /api/district/district_name/]
 
-    P --> PR[Recommendation Response]
-    A --> AR[Advisory Response]
-    D --> DR[District Response]
-    H --> HR[Service Status]
+    Health --> HealthResp[Service Readiness Response]
+    Predict --> PredictResp[Recommendation Payload]
+    Advisory --> AdvisoryResp[Advisory Text Payload]
+    District --> DistrictResp[District Context Payload]
 ```
 
-## Health Contract
+## 1) Health Endpoint Contract
+
+### Purpose
+
+Expose service readiness for monitoring and runtime verification.
 
 ### Request
 
 - Method: `GET`
 - Path: `/api/health`
 
-### Response
+### Response Semantics
 
-- Status indicator payload confirming service readiness.
+- Returns a simple status confirmation payload.
+- Suitable for uptime checks and environment validation.
 
-## Recommendation Contract
+## 2) Recommendation Endpoint Contract
+
+### Purpose
+
+Return prioritized crop recommendations based on submitted planning context.
 
 ### Request
 
 - Method: `POST`
 - Path: `/api/predict`
-- Expected conceptual fields:
-  - District context
-  - Soil/farming inputs
-  - Seasonal selection behavior
+- Conceptual request fields include:
+  - District identifier
+  - Input mode selection
+  - Farming and seasonal context
 
-### Response
+### Response Semantics
 
-- District label and current month context.
-- Weather context summary.
-- Ranked recommendation list with reasoning metadata.
+- District label context.
+- Current month context.
+- Weather summary context.
+- Ranked recommendation list with explanatory metadata.
 
-## Advisory Contract
+### Behavioral Contract
+
+- Valid inputs return structured recommendation output.
+- Invalid or incomplete inputs return validation feedback.
+
+## 3) Advisory Endpoint Contract
+
+### Purpose
+
+Generate contextual advisory guidance from user queries.
 
 ### Request
 
 - Method: `POST`
 - Path: `/api/advisory`
-- Expected conceptual fields:
-  - Farmer question
+- Conceptual request fields include:
+  - Advisory question
   - District context
   - Optional crop context
 
-### Response
+### Response Semantics
 
-- Text advisory output designed for practical field interpretation.
+- Plain-text advisory response for direct rendering in advisory UI.
 
-## District Information Contract
+### Behavioral Contract
+
+- Response is context-aware and tied to provided district/crop scope.
+- Can be displayed progressively in interactive advisory interfaces.
+
+## 4) District Endpoint Contract
+
+### Purpose
+
+Return district information used across planning and dashboard features.
 
 ### Request
 
 - Method: `GET`
 - Path: `/api/district/{district_name}`
 
-### Response
+### Response Semantics
 
-- District intelligence payload including planning-oriented regional context.
+- District-level context payload for dashboard rendering.
+- Includes planning-oriented regional sections.
 
-## Interaction Sequence for Recommendation + Advisory
+### Behavioral Contract
+
+- Known district values return district payload.
+- Unknown district values return not-found response behavior.
+
+## End-to-End Interaction Sequence
 
 ```mermaid
 sequenceDiagram
     participant User
     participant Frontend
-    participant PredictAPI as Predict Endpoint
-    participant Results
-    participant AdvisoryAPI as Advisory Endpoint
+    participant PredictAPI
+    participant DistrictAPI
+    participant AdvisoryAPI
 
-    User->>Frontend: Submit recommendation input
+    User->>Frontend: Submit recommendation request
     Frontend->>PredictAPI: POST /api/predict
-    PredictAPI-->>Frontend: Ranked recommendations
-    Frontend->>Results: Render results view
-    User->>Frontend: Ask follow-up advisory question
+    PredictAPI-->>Frontend: Recommendation payload
+
+    User->>Frontend: Open district insights
+    Frontend->>DistrictAPI: GET /api/district/{district_name}
+    DistrictAPI-->>Frontend: District payload
+
+    User->>Frontend: Ask advisory follow-up
     Frontend->>AdvisoryAPI: POST /api/advisory
     AdvisoryAPI-->>Frontend: Advisory text response
 ```
+
+## Integration Guidance
+
+- Treat endpoints as capability-specific contracts.
+- Preserve request field meaning across clients.
+- Use response semantics as the source for UI rendering logic.
+- Keep client-side fallback handling aligned with endpoint behavior.
+
+## Contract Evolution Guidance
+
+When extending services:
+
+1. Maintain backward-compatible field meaning where possible.
+2. Add new response elements as optional-first for client safety.
+3. Update this document’s endpoint section and diagrams together.
+4. Validate changes against all journey dependencies.
