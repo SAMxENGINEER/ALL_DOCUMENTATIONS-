@@ -6,10 +6,10 @@ Live experience: http://spanda-one.vercel.app/
 
 ## Read In This Order
 
-1. [Product Overview](./PRODUCT_OVERVIEW.md)
-2. [User Journey](./USER_JOURNEY.md)
-3. [Privacy and Safety](./PRIVACY_AND_SAFETY.md)
-4. [FAQ](./FAQ.md)
+1. [Product Overview](./01_PRODUCT_OVERVIEW.md)
+2. [User Journey](./02_USER_JOURNEY.md)
+3. [Privacy and Safety](./03_PRIVACY_AND_SAFETY.md)
+4. [FAQ](./04_FAQ.md)
 
 ## What Each File Covers
 
