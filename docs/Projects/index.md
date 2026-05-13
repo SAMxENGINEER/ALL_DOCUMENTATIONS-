@@ -19,6 +19,7 @@ This is the **central hub** for all my documented projects. Each project page co
 | **[Lung Cancer](./Lung_Cancer/index.md)** | Machine learning and deep learning approaches for early detection and classification of lung cancer | ML, DL, Medical AI |
 | **[MedAI](./MedAI/index.md)** | A broader medical imaging initiative covering classification, validation, and segmentation models | Medical Imaging, AI |
 | **[ImgTechAI](./ImgTechAI/index.md)** | A web-based image processing and computer vision application with real-time transformations and no-code interactivity | Streamlit, OpenCV, NumPy |
+| **[InterViewAI](./InterViewAI/index.md)** | A placement-preparation platform for mock interviews, aptitude practice, and resume feedback | AI, EdTech, Placement Prep |
 
 ---
 
